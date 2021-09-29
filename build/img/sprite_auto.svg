@@ -5,6 +5,8 @@
 <clipPath id="clip0">
 <rect width="12" height="7.4" fill="white" transform="translate(0 12) rotate(-90)"/>
 </clipPath>
+</symbol><symbol id="icon-circle-min" viewBox="0 0 95 95">
+<circle cx="47.5" cy="47.5" r="39" stroke="#0AD9C6" stroke-width="17"/>
 </symbol><symbol id="icon-circle" viewBox="0 0 180 180">
 <circle cx="90" cy="90" r="76.5" stroke="#0AD9C6" stroke-width="27"/>
 </symbol><symbol id="icon-close" viewBox="0 0 24 25">
