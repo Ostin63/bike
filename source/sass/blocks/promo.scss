@@ -1,6 +1,14 @@
 .promo {
   padding: 70px 15px;
   background: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 105px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 90px;
+  }
 }
 
 .promo__title {
@@ -15,19 +23,34 @@
 
 .promo__facts {
   width: 100%;
-  margin: 35px 0 0;
+  max-width: 1166px;
+  margin: 35px auto 0 auto;
   padding: 0;
   display: inline-block;
   list-style: none;
   counter-reset: list1;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .promo__facts-item {
   width: 263px;
   margin: 0 auto 35px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
   &:last-child {
     margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
   }
 
   &::before {
