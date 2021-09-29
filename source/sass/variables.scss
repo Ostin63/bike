@@ -1,15 +1,22 @@
 $tablet-width: 768px;
+$desktop-min-width: 880px;
 $desktop-width: 1024px;
+$desktop-max-width: 1440px;
 
 $font-open-sans: "OpenSans", "Arial", sans-serif;
 
 $white: #ffffff;
-$gray: #f6f6f6;
+$white-20: rgba(#ffffff, 0.2);
+$gray-ligth: #f6f6f6;
+$gray: #c9ccd4;
 $black: #000000;
 $black-ligth:  #1c1c1c;
+$black-ligth-50:  rgba(#1c1c1c, 0.5);
 $black-menu: #48494d;
 $black-spacial:#1f1f1f;
 $turquoise: #0ad9c6;
 $gray-20: rgba(20, 21, 23, 0.2);
 
+$border-white-20: 1px solid $white-20;
 $border-garay-20: 1px solid $gray-20;
+$border-gray: 1px solid $gray;
