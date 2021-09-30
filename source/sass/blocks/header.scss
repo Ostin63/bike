@@ -1,11 +1,12 @@
 .header {
   display: grid;
   grid-template-columns: 16px 68px 1fr 34px 16px;
-  grid-template-rows: 50px 70px max-content 70px 70px auto;
+  grid-template-rows: max-content 70px max-content 70px 70px auto;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    grid-template-rows: 50px 84px max-content 80px 70px auto;
+    grid-template-columns: 22px 68px 1fr 28px 22px;
+    grid-template-rows: max-content 84px max-content 80px 70px auto;
   }
 
   @media (min-width: $desktop-min-width) {
@@ -14,8 +15,8 @@
   }
 
   &::before {
-    width: 100%;
     height: 390px;
+    margin-top: 460px;
     content: "";
     background-image: url("../img/bg-bike-320.jpg");
     background-repeat: no-repeat;
@@ -34,6 +35,7 @@
 
     @media (min-width: $desktop-min-width) {
       height: 825px;
+      margin-top: 0;
       background-image: url("../img/bg-bike-big.jpg");
       background-repeat: no-repeat;
       background-position: 50% 0;
@@ -46,15 +48,23 @@
       background-position: 50% 100%;
     }
   }
+
+  &.deactive {
+    &::before {
+      margin-top: 0;
+    }
+  }
 }
 
 .header__logo-link {
-  margin-top: auto;
+  margin-top: 25px;
   display: inline-block;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  z-index: 1;
 
   @media (min-width: $desktop-min-width) {
+    margin-top: 0;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
   }
@@ -65,13 +75,14 @@
   height: 21px;
 }
 
-.header__menu-link {
+.header__menu-button {
   width: 50px;
   height: 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background: $turquoise;
+  border: none;
   grid-column: -3 / -1;
   grid-row: 1 / 2;
 
@@ -84,6 +95,22 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+    cursor: pointer;
+  }
+
+  &.active {
+    &::before {
+      position: relative;
+      width: 22px;
+      height: 23px;
+      content: "";
+      display: block;
+      background-image: url("../img/icon-close.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      z-index: 10;
+    }
   }
 
   @media (min-width: $desktop-min-width) {
@@ -91,55 +118,71 @@
   }
 }
 
-.header__nav {
-  display: none;
+.header__menu {
+  margin: 0;
+  padding: 78px 0 20px;
+  background: $white;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-  &.active {
-    display: block;
+  &.d-none {
+    display: none;
+
+    @media (min-width: $desktop-min-width) {
+      display: flex;
+    }
   }
 
   @media (min-width: $desktop-min-width) {
-    display: block;
+    padding: 0 20px 0 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border-bottom: $border-white-20;
     grid-column: 2 / -2;
     grid-row: 1 / 2;
   }
 }
 
-.header__menu-close {
-  @media (min-width: $desktop-min-width) {
-    display: none;
-  }
-}
-
-// .header__menu-close-svg {}
-
-.header__menu {
-  margin: 0;
-  padding: 0 15px;
-
-  @media (min-width: $desktop-min-width) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: $border-white-20;
-  }
-}
-
 .header__menu-item {
-  display: inline-block;
+  height: 60px;
+  margin-bottom: 30px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  background: $gray-special;
+
+  @media (min-width: $desktop-min-width) {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background: none;
+  }
 }
 
-.header__link {
-  margin-top: 21px;
-  padding: 4px;
+.header__menu-link {
   display: block;
   text-decoration: none;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 32px;
-  letter-spacing: -0.005em;
-  color: $white;
-  opacity: 0.7;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 140%;
+  color: $black-menu;
+
+  @media (min-width: $desktop-min-width) {
+    margin-top: 15px;
+    padding: 4px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: -0.005em;
+    color: $white;
+    opacity: 0.7;
+  }
 }
 
 .header__quote {
@@ -166,8 +209,10 @@
   }
 
   @media (min-width: $desktop-min-width) {
-    margin-top: 30px;
+    margin: 30px 0 25px;
     text-align: left;
+    font-size: 46px;
+    line-height: 64px;
   }
 }
 
@@ -184,8 +229,9 @@
   opacity: 0.8;
 
   @media (min-width: $desktop-min-width) {
-    margin-right: 50px;
+    margin-right: 40px;
     text-align: left;
+    font-size: 20px;
   }
 }
 
@@ -196,12 +242,21 @@
   @media (min-width: $tablet-width) {
     width: 321px;
     margin: 0 auto;
-    grid-column: 3 / 4;
   }
 
   @media (min-width: $desktop-min-width) {
+    width: 100%;
+    margin-top: 5px;
     grid-column: -3 / -2;
-    grid-row: 4 / 5;
+    grid-row: 3 / 5;
+  }
+}
+
+.header__form {
+  margin-top: 30px;
+
+  @media (min-width: $desktop-min-width) {
+    margin-top: 19px;
   }
 }
 
@@ -217,6 +272,7 @@
   mix-blend-mode: normal;
 
   @media (min-width: $desktop-min-width) {
+    max-width: 327px;
     grid-column: -3 / -2;
     grid-row: 3 / 4;
     font-size: 17px;
@@ -224,16 +280,20 @@
   }
 }
 
-// .header__wrapper-input {}
+.header__wrapper-input {
+  margin: 20px auto 0;
 
-// .header__label {}
+  &:first-child {
+    margin-top: 0;
+  }
+}
 
 .header__input {
   width: 100%;
   max-width: 327px;
   height: 48px;
+  margin: 0 auto;
   display: block;
-  margin: 20px auto 0;
   padding: 0 19px 0 25px;
   font-weight: normal;
   font-size: 15px;
@@ -242,6 +302,10 @@
   border: $border-gray;
   border-radius: 6px;
   color: $black-ligth-50;
+
+  @media (min-width: $desktop-min-width) {
+    letter-spacing: 0.45px;
+  }
 }
 
 .header__form-submit {
@@ -249,7 +313,7 @@
   max-width: 327px;
   height: 51px;
   display: block;
-  margin: 19px auto 0;
+  margin: 20px auto 0 auto;
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;
@@ -257,4 +321,8 @@
   border: none;
   background: $turquoise;
   border-radius: 6px;
+
+  @media (min-width: $desktop-min-width) {
+    letter-spacing: 0.15px;
+  }
 }

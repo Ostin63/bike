@@ -1,5 +1,5 @@
 .types-bike {
-  padding: 50px 25px;
+  padding: 50px 25px 54px;
   background: $gray-special;
   z-index: 1;
 
@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 149px 0 147px;
+    padding: 151px 0 147px;
   }
 }
 
@@ -20,6 +20,11 @@
   text-align: center;
   letter-spacing: -0.005em;
   color: $black-spacial;
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .types-bike__list {
@@ -38,7 +43,7 @@
   @media (min-width: $desktop-width) {
     width: 100%;
     max-width: 1176px;
-    padding: 60px 20px 0;
+    padding: 50px 20px 0;
   }
 
   @media (min-width: $desktop-max-width) {
@@ -47,19 +52,40 @@
 }
 
 .types-bike__item {
-  margin: 0 auto 40px auto;
+  margin: 0 auto 42px auto;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: start;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+  }
 
   &:last-child {
     margin-bottom: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 49px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 49px;
   }
 
   @media (min-width: $desktop-max-width) {
-    margin: 0;
+    &--road {
+      margin-bottom: 0;
+    }
 
-    &:nth-child(2) {
-      margin-bottom: -29px;
+    &--mountain {
+      position: relative;
+      top: 29px;
+    }
+
+    &--child {
+      position: relative;
+      top: -10px;
     }
   }
 }
@@ -86,25 +112,21 @@
     height: 566px;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 392px;
-  }
-
-  @media (min-width: $desktop-max-width) {
-    width: 342px;
-  }
-
   &--road {
     &::after {
       position: absolute;
       width: 127px;
       height: 127px;
-      bottom: -32px;
-      left: -32px;
+      bottom: -27px;
+      left: -27px;
       content: "";
       display: block;
       background: url("../img/icon-circle.svg");
       z-index: 0;
+
+      @media (min-width: $tablet-width) {
+        left: -37px;
+      }
 
       @media (min-width: $desktop-width) {
         width: 180px;
@@ -112,6 +134,10 @@
         bottom: 167px;
         left: -60px;
       }
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 503px;
     }
   }
 
@@ -121,11 +147,15 @@
       width: 68px;
       height: 68px;
       top: -20px;
-      right: -15px;
+      right: -13px;
       content: "";
       display: block;
       background: url("../img/icon-circle-min.svg");
       z-index: 15;
+
+      @media (min-width: $tablet-width) {
+        right: -25px;
+      }
 
       @media (min-width: $desktop-width) {
         width: 95px;
@@ -138,6 +168,10 @@
         right: -36px;
       }
     }
+
+    @media (min-width: $desktop-width) {
+      height: 513px;
+    }
   }
 
   &--mountain {
@@ -146,8 +180,8 @@
         position: absolute;
         width: 47px;
         height: 47px;
-        top: -20px;
-        left: 4px;
+        top: -18px;
+        left: -20px;
         content: "";
         display: block;
         background: url("../img/icon-square.svg");
@@ -159,7 +193,7 @@
         width: 47px;
         height: 47px;
         bottom: -23px;
-        right: 2px;
+        right: -23px;
         content: "";
         display: block;
         background: url("../img/icon-square.svg");
@@ -191,5 +225,13 @@
     width: 342px;
     height: 566px;
     margin: 0 auto;
+
+    &--road {
+      height: 503px;
+    }
+
+    &--child {
+      height: 513px;
+    }
   }
 }
