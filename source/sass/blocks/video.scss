@@ -98,6 +98,17 @@
     width: 65px;
     height: 65px;
   }
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    box-shadow: $shadow-hover-white;
+  }
+
+  &:active {
+    border-radius: 50%;
+    box-shadow: $shadow-active-white;
+  }
 }
 
 .video__img-block {

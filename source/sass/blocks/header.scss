@@ -2,11 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 393px 160px 327px 1fr;
   grid-template-rows: 62px 256px 21px min-content auto;
-  background-color: $white;
+  background-color: $black-gradient;
 
   @media (max-width: $desktop-min-width) {
     grid-template-columns: 22px 68px 1fr 28px 22px;
     grid-template-rows: max-content 84px max-content 80px 65px auto;
+    background: $gradient-bg;
   }
 
   @media (max-width: $mobile-width) {
@@ -19,12 +20,18 @@
     height: 825px;
     margin-top: 0;
     content: "";
+    background-color: $black-gradient;
     background-image: url("../img/bg-bike-big.jpg");
     background-repeat: no-repeat;
     background-position: 50% 100%;
     background-size: 100% auto;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-bike-big@2.jpg");
+      background-size: cover;
+    }
 
     @media (max-width: $desktop-max-width) {
       background-size: 1440px 825px;
@@ -34,10 +41,16 @@
     @media (max-width: $desktop-min-width) {
       height: 340px;
       margin-top: auto;
+      background-color: $black-gradient;
       background-image: url("../img/bg-bike-768.jpg");
       background-repeat: no-repeat;
       background-position: 50% 100%;
       background-size: 100% auto;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-bike-768@2.jpg");
+        background-size: cover;
+      }
     }
 
     @media (max-width: $tablet-width) {
@@ -47,16 +60,22 @@
     @media (max-width: $mobile-width-only) {
       height: 390px;
       content: "";
+      background-color: $black-gradient;
       background-image: url("../img/bg-bike-320.jpg");
       background-repeat: no-repeat;
-      background-position: 50% 0;
-      background-size: 100% 390px;
+      background-position: 50% 100%;
+      background-size: 100% auto;
       grid-column: 1 / -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-bike-320@2.jpg");
+        background-size: cover;
+      }
     }
   }
 }
 
-.header__logo-link {
+.header__logo {
   margin-top: 0;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
@@ -199,7 +218,8 @@
   grid-column: 2 / 3;
   grid-row: 4 / -2;
 
-  h2 {
+  strong {
+    display: block;
     margin: 30px 0 25px;
     text-align: left;
     font-weight: bold;
@@ -306,6 +326,14 @@
     border-radius: 6px;
     color: $black-ligth-50;
   }
+
+  input[type="tel"] {
+    &.error {
+      outline: none;
+      border-color: $red;
+      box-shadow: $shadow-error;
+    }
+  }
 }
 
 .header__form-submit {
@@ -322,4 +350,25 @@
   background: $turquoise;
   border-radius: 6px;
   letter-spacing: 0.15px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-hover-white;
+  }
+
+  &:active {
+    box-shadow: $shadow-active-white;
+  }
+
+  @media (max-width: $desktop-min-width) {
+    &:hover,
+    &:focus {
+      box-shadow: $shadow-hover-black;
+    }
+
+    &:active {
+      box-shadow: $shadow-active-black;
+    }
+  }
 }

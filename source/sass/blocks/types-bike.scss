@@ -91,6 +91,7 @@
   height: 566px;
   display: block;
   margin: 0 auto;
+  background-color: $gray;
   border-radius: 10px;
 
   @media (max-width: $desktop-max-width) {
@@ -104,11 +105,12 @@
     height: 566px;
     margin: 0 auto;
     display: block;
+    border-radius: 10px;
     z-index: 10;
 
     @media (max-width: $desktop-max-width) {
       width: 270px;
-      height: auto;
+      height: 300px;
       object-fit: fill;
     }
   }
