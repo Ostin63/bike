@@ -1,4 +1,4 @@
-/* eslint-disable strict */
+'use strict';
 var body = document.querySelector('.body');
 var header = body.querySelector('.header');
 var menuToggle = body.querySelector('.header__menu-button');
