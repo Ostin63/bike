@@ -144,7 +144,7 @@
 
     &:hover,
     &:focus {
-      box-shadow: $shadow-error;
+      border: $border-gray;
     }
   }
 
