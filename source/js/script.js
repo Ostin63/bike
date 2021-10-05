@@ -1,5 +1,6 @@
 'use strict';
-var body = document.querySelector('.body');
+var page = document.querySelector('.page');
+var body = page.querySelector('.body');
 var header = body.querySelector('.header');
 var menuToggle = body.querySelector('.header__menu-button');
 var headerMenu = header.querySelector('.header__menu');
@@ -18,7 +19,22 @@ if (footerMap) {
 
 function onToggleMenu() {
   menuToggle.classList.toggle('header__menu-button--active');
+  headerMenu.classList.toggle('header__menu--show');
   headerMenu.classList.toggle('header__menu--none');
+  page.classList.toggle('page--active');
+}
+
+function onremoveMenu() {
+  menuToggle.classList.remove('header__menu-button--active');
+  headerMenu.classList.remove('header__menu--show');
+  headerMenu.classList.add('header__menu--none');
+  page.classList.remove('page--active');
+}
+
+function checkWidth() {
+  if (window.innerWidth >= 1023) {
+    onremoveMenu();
+  }
 }
 
 function validateForm(evt) {
@@ -26,7 +42,7 @@ function validateForm(evt) {
 
   var tel = headerFormTel.value;
 
-  if (!/^\+7\[0-9]+$/.test(tel)) {
+  if (!/\+[0-9]+$/.test(tel)) {
     headerFormTel.setCustomValidity('Вводить нужно только цифры');
     headerFormTel.classList.add('error');
   } else {
@@ -42,3 +58,4 @@ for (var i = 0; i < menuLinks.length; i++) {
 
 menuToggle.addEventListener('click', onToggleMenu);
 headerFormTel.addEventListener('input', validateForm);
+window.addEventListener('resize', checkWidth);
