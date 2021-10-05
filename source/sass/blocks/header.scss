@@ -1,7 +1,7 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 393px 160px 327px 1fr;
-  grid-template-rows: min-content 256px 21px min-content auto;
+  grid-template-rows: min-content 256px 21px min-content 219px;
   background-color: $black-gradient;
 
   @media (max-width: $desktop-width) {
@@ -16,8 +16,8 @@
   }
 
   &::before {
-    width: 100%;
-    height: 825px;
+    // width: 100%;
+    // height: auto;
     margin-top: 0;
     content: "";
     background-color: $black-gradient;
@@ -33,18 +33,17 @@
       background-size: cover;
     }
 
-    @media (max-width: $desktop-max-width) {
-      background-size: 1440px 825px;
-    }
+    // @media (max-width: $desktop-max-width) {
+    //   background-size: 1440px 825px;
+    // }
 
     @media (max-width: $desktop-width) {
-      height: 340px;
-      margin-top: auto;
+      // margin-top: auto;
       background-color: $black-gradient;
       background-image: url("../img/bg-bike-768.jpg");
       background-repeat: no-repeat;
       background-position: 50% 100%;
-      background-size: 100% auto;
+      background-size: auto 100%;
       grid-row: 1 / 5;
 
       @media (min-resolution: 2dppx) {
@@ -53,18 +52,18 @@
       }
     }
 
-    @media (max-width: $tablet-width) {
-      background-size: 768px 340px;
-    }
+    // @media (max-width: $tablet-width) {
+    //   background-size: 768px 340px;
+    // }
 
     @media (max-width: $mobile-width-only) {
-      height: 390px;
+      // height: 390px;
       content: "";
       background-color: $black-gradient;
       background-image: url("../img/bg-bike-320.jpg");
       background-repeat: no-repeat;
       background-position: 50% 100%;
-      background-size: 100% auto;
+      background-size: auto 100%;
       grid-column: 1 / -1;
 
       @media (min-resolution: 2dppx) {
@@ -75,7 +74,7 @@
   }
 }
 
-.header__logo {
+.header__logo-link {
   margin-top: 0;
   grid-column: 2 / 3;
   grid-row: 3 / 4;

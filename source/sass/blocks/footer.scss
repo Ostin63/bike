@@ -1,8 +1,7 @@
 .footer {
   display: grid;
   grid-template-columns: 35px 1fr 35px;
-  grid-template-rows: 150px max-content 30px max-content 42px max-content 37px max-content 95px;
-  flex: 0 0 auto;
+  grid-template-rows: 150px max-content 30px max-content 42px max-content 37px max-content 75px;
 
   h3 {
     margin: 0;
@@ -126,12 +125,13 @@
 
 .footer__wrapper-link {
   height: 25px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (max-width: $tablet-width) {
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
   }
 
   &--mail {
@@ -157,13 +157,9 @@
       content: "";
       display: block;
       margin-top: -3px;
-      margin-right: 14px;
+      margin-right: 20px;
       background: url("../img/icon-phone.svg") 50% 50% no-repeat;
       background-size: cover;
-    }
-
-    @media (max-width: $mobile-width-only) {
-      margin-top: 20px;
     }
   }
 }
@@ -180,9 +176,9 @@
   color: $black-ligth-50;
 
   &--phone {
-    margin-right: 20px;
+    margin-right: 13px;
     line-height: 32px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.05px;
 
     @media (max-width: $desktop-width) {
       margin-right: 12px;

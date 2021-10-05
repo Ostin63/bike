@@ -19,30 +19,34 @@
   }
 
   @media (max-width: $desktop-width) {
-    padding: 50px 63px 16px;
+    padding: 50px 63px 52px;
   }
 
   @media (max-width: $tablet-width) {
     padding: 50px 16px 14px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 44px;
+  }
 }
 
 .types-bike__list {
   width: 100%;
-  max-width: 1176px;
+  max-width: 1244px;
   margin: 0 auto;
-  padding: 60px 0 0;
+  padding: 0 34px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @media (max-width: $desktop-width) {
-    padding: 30px 0 0;
+    padding: 0;
   }
 }
 
 .types-bike__item {
-  margin: 0 auto 50px auto;
+  margin: 60px auto 50px auto;
   display: flex;
   flex-direction: column-reverse;
   justify-content: start;
@@ -74,12 +78,17 @@
   }
 
   @media (max-width: $desktop-width) {
-    height: 356px;
+    margin: 30px auto 20px auto;
     top: 0;
   }
 
   @media (max-width: $tablet-width) {
     margin-bottom: 39px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 11px;
+    padding: 0;
   }
 
   p {
