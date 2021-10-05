@@ -43,7 +43,7 @@ function validateForm(evt) {
   var tel = headerFormTel.value;
 
   if (!/\+[0-9]+$/.test(tel)) {
-    headerFormTel.setCustomValidity('Вводить нужно только цифры');
+    headerFormTel.setCustomValidity('Вводить нужно +7 и тд');
     headerFormTel.classList.add('error');
   } else {
     headerFormTel.setCustomValidity('');
