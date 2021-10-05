@@ -134,6 +134,15 @@
   @media (max-width: $desktop-width) {
     display: flex;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header__menu {
@@ -328,7 +337,11 @@
     background: $white;
     border: $border-gray;
     border-radius: 6px;
-    color: $black-ligth-50;
+    color: $black;
+
+    &::placeholder {
+      color: $black-ligth-50;
+    }
   }
 
   input[type="tel"] {

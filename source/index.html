@@ -48,7 +48,7 @@
       <form action="https://echo.htmlacademy.ru/" method="POST" class="header__form">
         <div class="header__wrapper-input">
           <label for="fullName"></label>
-          <input type="text" id="fullName" name="fullName" placeholder="Введите Ваше Имя">
+          <input type="text" id="fullName" name="fullName" placeholder="Введите Ваше Имя" required>
         </div>
         <div class="header__wrapper-input">
           <label for="phone"></label>
@@ -85,10 +85,12 @@
           <p>Дорожный велосипед</p>
           <div class="types-bike__img-wrapper types-bike__img-wrapper--road">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/type-bike-big-1.webp, img/type-bike-big-1@2.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/type-bike-big-1.webp, img/type-bike-big-1@2.webp 2x">
               <source type="image/webp" srcset="img/type-bike-320-1.webp, img/type-bike-320-1@2.webp 2x">
               <!-- 1х: 342px; 2x: 684px -->
-              <img src="img/type-bike-big-1.jpg" srcset="img/type-bike-big-1@2.jpg" width="342" height="503" alt="Фото дорожного велосипеда">
+              <img src="img/type-bike-big-1.jpg" srcset="img/type-bike-big-1@2.jpg" width="342" height="503"
+                alt="Фото дорожного велосипеда">
             </picture>
           </div>
         </li>
@@ -96,10 +98,12 @@
           <p>Горный велосипед</p>
           <div class="types-bike__img-wrapper types-bike__img-wrapper--mountain">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/type-bike-big-2.webp, img/type-bike-big-2@2.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/type-bike-big-2.webp, img/type-bike-big-2@2.webp 2x">
               <source type="image/webp" srcset="img/type-bike-320-2.webp, img/type-bike-320-2@2.webp 2x">
               <!-- 1х: 342px; 2x: 684px -->
-              <img src="img/type-bike-big-2.jpg" srcset="img/type-bike-big-2@2.jpg" width="342" height="566" alt="Фото горного велосипеда">
+              <img src="img/type-bike-big-2.jpg" srcset="img/type-bike-big-2@2.jpg" width="342" height="566"
+                alt="Фото горного велосипеда">
             </picture>
           </div>
         </li>
@@ -107,10 +111,12 @@
           <p>Детский велосипед</p>
           <div class="types-bike__img-wrapper types-bike__img-wrapper--child">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/type-bike-big-3.webp, img/type-bike-big-3@2.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/type-bike-big-3.webp, img/type-bike-big-3@2.webp 2x">
               <source type="image/webp" srcset="img/type-bike-320-3.webp, img/type-bike-320-3@2.webp 2x">
               <!-- 1х: 342px; 2x: 684px -->
-              <img src="img/type-bike-big-3.jpg" srcset="img/type-bike-big-3@2.jpg" width="342" height="513" alt="Фото детского велосипеда">
+              <img src="img/type-bike-big-3.jpg" srcset="img/type-bike-big-3@2.jpg" width="342" height="513"
+                alt="Фото детского велосипеда">
             </picture>
           </div>
         </li>
@@ -131,7 +137,8 @@
             <source type="image/webp" media="(min-width: 768px)" srcset="img/video-768.webp, img/video-768@2.webp 2x">
             <source type="image/webp" srcset="img/video-min.webp, img/video-min@2.webp 2x">
             <!-- 1х: 929px; 2x: 1858px -->
-            <img src="img/video-big.jpg" srcset="img/video-big@2.jpg" width="929" height="522" alt="Заставка видео про велосипеды">
+            <img src="img/video-big.jpg" srcset="img/video-big@2.jpg" width="929" height="522"
+              alt="Заставка видео про велосипеды">
           </picture>
         </div>
       </div>
@@ -148,13 +155,9 @@
         alt="карта засположения магазина Moon ул. Большая Конюшенная, д. 19">
     </div>
     <div class="footer__contacts">
-      <div class="footer__wrapper-link footer__wrapper-link--mail">
-        <a class="footer__contacts-link footer__contacts-link--mail"
-          href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-      </div>
-      <div class="footer__wrapper-link footer__wrapper-link--phone">
-        <a class="footer__contacts-link footer__contacts-link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
-      </div>
+      <a class="footer__contacts-link footer__contacts-link--mail"
+        href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+      <a class="footer__contacts-link footer__contacts-link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
     </div>
   </footer>
 

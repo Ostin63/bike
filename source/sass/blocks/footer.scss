@@ -123,16 +123,18 @@
   grid-row: -3 / -2;
 }
 
-.footer__wrapper-link {
-  height: 25px;
+.footer__contacts-link {
+  margin-top: -5px;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  @media (max-width: $tablet-width) {
-    margin: 0 auto 20px auto;
-  }
+  justify-content: space-between;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.4px;
+  color: $black-ligth-50;
 
   &--mail {
     &::before {
@@ -140,40 +142,23 @@
       height: 20px;
       content: "";
       display: block;
-      margin-right: 23px;
+      margin-right: 10px;
       background: url("../img/icon-mail.svg") 50% 50% no-repeat;
       background-size: cover;
 
       @media (max-width: $desktop-width) {
         margin-right: 15px;
       }
+
+      @media (max-width: $tablet-width) {
+        margin-right: 15px;
+      }
+    }
+
+    @media (max-width: $tablet-width) {
+      letter-spacing: 0.4px;
     }
   }
-
-  &--phone {
-    &::before {
-      width: 17px;
-      height: 24px;
-      content: "";
-      display: block;
-      margin-top: -3px;
-      margin-right: 20px;
-      background: url("../img/icon-phone.svg") 50% 50% no-repeat;
-      background-size: cover;
-    }
-  }
-}
-
-.footer__contacts-link {
-  display: inline-block;
-  vertical-align: middle;
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0.4px;
-  align-items: center;
-  color: $black-ligth-50;
 
   &--phone {
     margin-right: 13px;
@@ -181,7 +166,43 @@
     letter-spacing: 0.05px;
 
     @media (max-width: $desktop-width) {
-      margin-right: 12px;
+      margin-right: 10px;
     }
+
+    @media (max-width: $tablet-width) {
+      padding-right: 10px;
+    }
+
+    &::before {
+      width: 17px;
+      height: 24px;
+      content: "";
+      display: block;
+      margin-right: 20px;
+      background: url("../img/icon-phone.svg") 50% 50% no-repeat;
+      background-size: cover;
+
+      @media (max-width: $tablet-width) {
+        margin-right: 16px;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    margin-top: -3px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $turquoise;
+  }
+
+  &:active {
+    color: $red;
   }
 }

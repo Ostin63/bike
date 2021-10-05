@@ -26,7 +26,7 @@ function validateForm(evt) {
 
   var tel = headerFormTel.value;
 
-  if (!/^[0-9]+$/.test(tel)) {
+  if (!/^\+7\[0-9]+$/.test(tel)) {
     headerFormTel.setCustomValidity('Вводить нужно только цифры');
     headerFormTel.classList.add('error');
   } else {
