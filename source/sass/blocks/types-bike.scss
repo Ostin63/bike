@@ -18,12 +18,8 @@
     }
   }
 
-  @media (max-width: $desktop-max-width) {
-    padding: 151px 100px 129px;
-  }
-
   @media (max-width: $desktop-width) {
-    padding: 50px 65px 16px;
+    padding: 50px 63px 16px;
   }
 
   @media (max-width: $tablet-width) {
@@ -58,14 +54,26 @@
   &--mountain {
     position: relative;
     top: 29px;
+
+    @media (max-width: $desktop-width-only) {
+      top: 0;
+    }
   }
 
   &--child {
     position: relative;
     top: -10px;
+
+    @media (max-width: $desktop-width-only) {
+      top: 0;
+    }
   }
 
-  @media (max-width: $desktop-max-width) {
+  @media (max-width: $desktop-width-only) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: $desktop-width) {
     height: 356px;
     top: 0;
   }
@@ -87,14 +95,12 @@
 
 .types-bike__img-wrapper {
   position: relative;
-  width: 342px;
-  height: 566px;
   display: block;
   margin: 0 auto;
   background-color: $gray;
   border-radius: 10px;
 
-  @media (max-width: $desktop-max-width) {
+  @media (max-width: $desktop-width) {
     width: 270px;
     height: 300px;
   }
@@ -108,7 +114,7 @@
     border-radius: 10px;
     z-index: 10;
 
-    @media (max-width: $desktop-max-width) {
+    @media (max-width: $desktop-width) {
       width: 270px;
       height: 300px;
       object-fit: fill;
@@ -116,6 +122,14 @@
   }
 
   &--road {
+    img {
+      height: 503px;
+
+      @media (max-width: $desktop-width) {
+        height: 300px;
+      }
+    }
+
     &::after {
       position: absolute;
       width: 180px;
@@ -127,14 +141,9 @@
       background: url("../img/icon-circle.svg") 50% 50% no-repeat;
       z-index: 0;
 
-      @media (max-width: $desktop-max-width) {
+      @media (max-width: $desktop-width) {
         width: 127px;
         height: 127px;
-        bottom: -27px;
-        left: -27px;
-      }
-
-      @media (max-width: $desktop-width) {
         bottom: -28px;
         left: -38px;
       }
@@ -147,6 +156,15 @@
   }
 
   &--child {
+    img {
+      height: 513px;
+
+      @media (max-width: $desktop-width) {
+        height: 300px;
+        object-fit: fill;
+      }
+    }
+
     &::after {
       position: absolute;
       width: 95px;
@@ -158,14 +176,9 @@
       background: url("../img/icon-circle-min.svg") 50% 50% no-repeat;
       z-index: 15;
 
-      @media (max-width: $desktop-max-width) {
+      @media (max-width: $desktop-width) {
         width: 68px;
         height: 68px;
-        top: -20px;
-        right: -23px;
-      }
-
-      @media (max-width: $desktop-width) {
         top: -22px;
         right: -25px;
       }
@@ -189,7 +202,7 @@
       background: url("../img/icon-square.svg") 50% 50% no-repeat;
       z-index: 15;
 
-      @media (max-width: $desktop-max-width) {
+      @media (max-width: $desktop-width) {
         display: none;
       }
     }
@@ -205,7 +218,7 @@
       background: url("../img/icon-square.svg") 50% 50% no-repeat;
       z-index: 15;
 
-      @media (max-width: $desktop-max-width) {
+      @media (max-width: $desktop-width) {
         display: none;
       }
     }

@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 35px 1fr 35px;
   grid-template-rows: 150px max-content 30px max-content 42px max-content 37px max-content 95px;
+  flex: 0 0 auto;
 
   h3 {
     margin: 0;

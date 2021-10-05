@@ -1,12 +1,12 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 393px 160px 327px 1fr;
-  grid-template-rows: 62px 256px 21px min-content auto;
+  grid-template-rows: min-content 256px 21px min-content auto;
   background-color: $black-gradient;
 
   @media (max-width: $desktop-width) {
     grid-template-columns: 22px 68px 1fr 28px 22px;
-    grid-template-rows: max-content 84px max-content 80px 65px auto;
+    grid-template-rows: max-content 84px max-content 78px 65px auto;
     background: $gradient-bg;
   }
 
@@ -35,7 +35,6 @@
 
     @media (max-width: $desktop-max-width) {
       background-size: 1440px 825px;
-      grid-row: 1 / 5;
     }
 
     @media (max-width: $desktop-width) {
@@ -46,6 +45,7 @@
       background-repeat: no-repeat;
       background-position: 50% 100%;
       background-size: 100% auto;
+      grid-row: 1 / 5;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/bg-bike-768@2.jpg");
@@ -138,16 +138,19 @@
 }
 
 .header__menu {
+  width: 100%;
+  height: auto;
+  margin: 0;
   padding: 0 20px 0 16px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   background: none;
   border-bottom: $border-white-20;
   grid-column: 2 / -2;
   grid-row: 1 / 2;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
 
   &--none {
     display: flex;
@@ -175,7 +178,7 @@
   background: none;
 
   a {
-    margin-top: 15px;
+    margin: 15px 0 7px;
     display: block;
     text-decoration: none;
     font-weight: normal;
@@ -187,7 +190,7 @@
     opacity: 0.7;
 
     @media (max-width: $desktop-width) {
-      margin-top: 0;
+      margin: 0;
       font-weight: 300;
       font-size: 20px;
       line-height: 140%;
