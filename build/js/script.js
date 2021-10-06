@@ -52,10 +52,16 @@ function validateForm(evt) {
   headerFormTel.reportValidity();
 }
 
-for (var i = 0; i < menuLinks.length; i++) {
-  menuLinks[i].addEventListener('click', onToggleMenu);
+function onToggleLinks() {
+  if (window.innerWidth < 1023) {
+    for (var i = 0; i < menuLinks.length; i++) {
+      menuLinks[i].addEventListener('click', onToggleMenu);
+    }
+
+    menuToggle.addEventListener('click', onToggleMenu);
+  }
 }
 
-menuToggle.addEventListener('click', onToggleMenu);
 headerFormTel.addEventListener('input', validateForm);
 window.addEventListener('resize', checkWidth);
+window.addEventListener('resize', onToggleLinks);
