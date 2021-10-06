@@ -46,7 +46,7 @@
 }
 
 .types-bike__item {
-  margin: 60px auto 50px auto;
+  margin: 29px auto 50px auto;
   display: flex;
   flex-direction: column-reverse;
   justify-content: start;
@@ -57,7 +57,7 @@
 
   &--mountain {
     position: relative;
-    top: 29px;
+    margin-top: 58px;
 
     @media (max-width: $desktop-width-only) {
       top: 0;
@@ -66,7 +66,7 @@
 
   &--child {
     position: relative;
-    top: -10px;
+    margin-top: 19px;
 
     @media (max-width: $desktop-width-only) {
       top: 0;
