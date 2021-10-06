@@ -24,19 +24,6 @@ function onToggleMenu() {
   page.classList.toggle('page--active');
 }
 
-function onremoveMenu() {
-  menuToggle.classList.remove('header__menu-button--active');
-  headerMenu.classList.remove('header__menu--show');
-  headerMenu.classList.add('header__menu--none');
-  page.classList.remove('page--active');
-}
-
-function checkWidth() {
-  if (window.innerWidth >= 1023) {
-    onremoveMenu();
-  }
-}
-
 function validateForm(evt) {
   evt.preventDefault();
 
@@ -52,16 +39,9 @@ function validateForm(evt) {
   headerFormTel.reportValidity();
 }
 
-function onToggleLinks() {
-  if (window.innerWidth < 1023) {
-    for (var i = 0; i < menuLinks.length; i++) {
-      menuLinks[i].addEventListener('click', onToggleMenu);
-    }
-
-    menuToggle.addEventListener('click', onToggleMenu);
-  }
+for (var i = 0; i < menuLinks.length; i++) {
+  menuLinks[i].addEventListener('click', onToggleMenu);
 }
 
+menuToggle.addEventListener('click', onToggleMenu);
 headerFormTel.addEventListener('input', validateForm);
-window.addEventListener('resize', checkWidth);
-window.addEventListener('resize', onToggleLinks);
