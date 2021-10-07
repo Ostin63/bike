@@ -1,0 +1,35 @@
+$mobile-width: 320px;
+$mobile-width-only: 450px;
+$tablet-width: 767px;
+$desktop-width: 1023px;
+$desktop-width-only: 1220px;
+$desktop-max-width: 1439px;
+
+$font-open-sans: "opensans", "Arial", sans-serif;
+
+$white: #ffffff;
+$white-20: rgba(#ffffff, 0.2);
+$gray-ligth: #f6f6f6;
+$gray-special: #f6f7f9;
+$gray: #c9ccd4;
+$black: #000000;
+$black-ligth: #1c1c1c;
+$black-ligth-50: rgba(#1c1c1c, 0.5);
+$black-background-video: #131314;
+$black-menu: #48494d;
+$black-spacial:#1f1f1f;
+$black-gradient: #1e1e1e;
+$turquoise: #0ad9c6;
+$red: #ef5353;
+
+$border-white-20: 1px solid $white-20;
+$border-gray: 1px solid $gray;
+$border-red: 1px solid $red;
+
+$gradient-bg: linear-gradient(180deg, $black-gradient 50%, $white 50%);
+
+$shadow-hover-black:-5px -10px 10px -4px rgba(0, 0, 0, 0.4);
+$shadow-active-black: -5px -10px 30px -4px rgba(0, 0, 0, 0.4);
+$shadow-hover-white: -5px -10px 10px -4px rgba(255, 255, 255, 0.4);
+$shadow-active-white: -5px -10px 30px -4px rgba(255, 255, 255, 0.4);
+$shadow-error: 0 0 21px 0 $red inset;
